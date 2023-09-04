@@ -1,0 +1,13 @@
+version: "3"
+services:
+  discovery-service:
+    image: jimoou/artemoderni-discovery-service:latest
+    restart: always
+    ports:
+      - "8761:8761"
+
+  config-server:
+    image: jimoou/artemoderni-config-server:latest
+    restart: always
+    ports:
+      - "7171:7171"
