@@ -1,0 +1,7 @@
+version: "3"
+services:
+  email-service:
+    image: jimoou/artemoderni-email-service:latest
+    restart: always
+    ports:
+      - "8892:8892"
