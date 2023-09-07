@@ -1,0 +1,11 @@
+version: "3"
+services:
+  product-service:
+    image: jimoou/artemoderni-product-service:latest
+    restart: always
+    container_name: product-service
+    network_mode: "host"
+    environment:
+      CONFIG_PRIVATE_IP: ${CONFIG_PRIVATE_IP}
+    ports:
+      - "8892:8892"

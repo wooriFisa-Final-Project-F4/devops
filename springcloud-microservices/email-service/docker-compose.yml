@@ -1,0 +1,11 @@
+version: "3"
+services:
+  email-service:
+    image: jimoou/artemoderni-email-service:latest
+    restart: always
+    container_name: email-service
+    network_mode: "host"
+    environment:
+      CONFIG_PRIVATE_IP: ${CONFIG_PRIVATE_IP}
+    ports:
+      - "8892:8892"

@@ -1,0 +1,10 @@
+version: "3"
+services:
+  api-gateway:
+    image: jimoou/artemoderni-api-gateway:latest
+    restart: always
+    container_name: api-gateway
+    environment:
+      CONFIG_PRIVATE_IP: ${CONFIG_PRIVATE_IP}
+    ports:
+      - "9191:9191"

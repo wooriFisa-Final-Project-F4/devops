@@ -1,0 +1,8 @@
+version: "3"
+services:
+  discovery-service:
+    image: jimoou/artemoderni-discovery-service:latest
+    restart: always
+    container_name: discovery-service
+    ports:
+      - "8761:8761"

@@ -1,0 +1,11 @@
+version: "3"
+services:
+  user-service:
+    image: jimoou/artemoderni-user-service:latest
+    restart: always
+    container_name: user-service
+    network_mode: "host"
+    environment:
+      CONFIG_PRIVATE_IP: ${CONFIG_PRIVATE_IP}
+    ports:
+      - "8885:8885"

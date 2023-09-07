@@ -1,0 +1,11 @@
+version: "3"
+services:
+  auction-status-updater:
+    image: jimoou/artemoderni-auction-status-updater:latest
+    restart: always
+    container_name: auction-status-updater
+    network_mode: "host"
+    environment:
+      CONFIG_PRIVATE_IP: ${CONFIG_PRIVATE_IP}
+    ports:
+      - "18890:18890"

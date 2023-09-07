@@ -1,0 +1,8 @@
+version: "3"
+services:
+  config-server:
+    image: jimoou/artemoderni-config-server:latest
+    restart: always
+    container_name: config-server
+    ports:
+      - "7171:7171"
