@@ -1,0 +1,11 @@
+version: "3"
+services:
+  auction-service:
+    image: jimoou/artemoderni-auction-service:latest
+    restart: always
+    container_name: auction-service
+    network_mode: "host"
+    environment:
+      CONFIG_PRIVATE_IP: ${CONFIG_PRIVATE_IP}
+    ports:
+      - "8890:8890"

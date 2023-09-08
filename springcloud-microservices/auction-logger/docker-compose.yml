@@ -1,0 +1,11 @@
+version: "3"
+services:
+  auction-logger:
+    image: jimoou/artemoderni-auction-logger:latest
+    restart: always
+    container_name: auction-logger
+    network_mode: "host"
+    environment:
+      CONFIG_PRIVATE_IP: ${CONFIG_PRIVATE_IP}
+    ports:
+      - "38890:38890"
