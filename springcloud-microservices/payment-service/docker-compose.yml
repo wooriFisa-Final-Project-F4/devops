@@ -1,0 +1,11 @@
+version: "3"
+services:
+  payment-service:
+    image: jimoou/artemoderni-payment-service:latest
+    restart: always
+    container_name: payment-service
+    network_mode: "host"
+    environment:
+      CONFIG_PRIVATE_IP: ${CONFIG_PRIVATE_IP}
+    ports:
+      - "8891:8891"
